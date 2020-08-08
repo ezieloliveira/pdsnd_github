@@ -5,7 +5,7 @@ The Project and README file was created on the 8th of August, 2020.
 Bikeshare Project
 
 ### Description
-A study on the bicycle sharing system of three American cities.
+A study on the bicycle sharing system of three American cities (Chicago, New York City and Washington).
 
 #### Features
 This code asks user to specify a city, month, and day to analyze.
