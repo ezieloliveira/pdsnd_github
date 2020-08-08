@@ -7,6 +7,15 @@ Bikeshare Project
 ### Description
 A study on the bicycle sharing system of three American cities.
 
+#### Features
+This code asks user to specify a city, month, and day to analyze.
+
+According the filters is possible displays the following statistics:
+
+1. The most frequent times of travel;
+2. The most popular stations and trip;
+3. The total and average trip duration.
+
 ### Files used
 bikeshare.py
 chicago.csv
