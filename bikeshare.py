@@ -111,11 +111,11 @@ def time_stats(df):
     star_hour_cnt = df['Start Hour'].count()
     morning, afternoon, evening, night = 0, 0, 0, 0
     for hour, cnt in df.groupby(['Start Hour'])['Start Hour'].count().iteritems():
-        if (hour > 6 and hour <= 12):
+        if (hour > 5 and hour <= 12):
             morning += cnt
-        elif (hour > 12 and hour <= 17):
+        elif (hour > 12 and hour <= 16):
             afternoon += cnt
-        elif (hour > 17 and hour <= 20):
+        elif (hour > 16 and hour <= 21):
             evening  += cnt
         else:
             night += cnt
@@ -133,12 +133,6 @@ def station_stats(df):
     """
     print('\nCalculating The Most Popular Stations and Trip...\n')
     start_time = time.time()
-
-    # display most commonly used start station
-    print('Most Commonly Used Start Station: {}'.format(df['Start Station'].mode()[0]))
-
-    # display most commonly used end station
-    print('\nMost Commonly Used End Station: {}'.format(df['End Station'].mode()[0]))
 
     # display most frequent combination of start station and end station trip
     station_trip = '- START STATION: ' + df['Start Station'] + ' / ' + 'END STATION: ' + df['End Station']
