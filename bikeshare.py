@@ -111,11 +111,11 @@ def time_stats(df):
     star_hour_cnt = df['Start Hour'].count()
     morning, afternoon, evening, night = 0, 0, 0, 0
     for hour, cnt in df.groupby(['Start Hour'])['Start Hour'].count().iteritems():
-        if (hour > 6 and hour <= 12):
+        if (hour > 5 and hour <= 12):
             morning += cnt
-        elif (hour > 12 and hour <= 17):
+        elif (hour > 12 and hour <= 16):
             afternoon += cnt
-        elif (hour > 17 and hour <= 20):
+        elif (hour > 16 and hour <= 21):
             evening  += cnt
         else:
             night += cnt
